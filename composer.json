@@ -1,0 +1,42 @@
+{
+    "name": "georgringer/rss-fluid",
+    "type": "typo3-cms-extension",
+    "description": "Render RSS feed with fluid",
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "rss",
+        "fluid",
+		"simplepie"
+    ],
+    "homepage": "https://ringer.it",
+    "authors": [
+        {
+            "name": "Georg Ringer",
+            "role": "Developer"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4 || ^11"
+    },
+    "autoload": {
+        "psr-4": {
+            "GeorgRinger\\RssFluid\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/rss-fluid": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "rss_fluid"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+lib.contentElement.templateRootPaths.817 = EXT:rss_fluid/Resources/Private/Templates/
+
+tt_content.rss_fluid =< lib.contentElement
+tt_content.rss_fluid {
+  templateName = RssFluid
+  dataProcessing {
+
+    10 = GeorgRinger\RssFluid\DataProcessing\RssParserProcessor
+    10 {
+      as = rss
+      import_path = 1:/fileadmin/rss_import/
+    }
+  }
+}

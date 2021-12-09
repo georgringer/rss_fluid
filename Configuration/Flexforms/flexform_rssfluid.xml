@@ -1,0 +1,23 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.url>
+                        <TCEforms>
+                            <label>Url</label>
+                            <config>
+                                <type>input</type>
+                                <eval>required,trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.url>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

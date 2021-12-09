@@ -1,0 +1,31 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Header">
+    <f:render partial="Header/All" arguments="{_all}"/>
+</f:section>
+<f:section name="Main">
+    <f:if condition="{rss.items}">
+        <f:for each="{rss.items}" as="item">
+            <h3><a href="{item.permalink}" target="_blank">{item.title}</a></h3>
+            <p>{item.description}</p>
+            <f:if condition="{item.categories}">
+                <f:for each="{item.categories}" as="category">
+                    <span>{category}</span>
+                </f:for>
+            </f:if>
+            <f:if condition="{item.enclosure}">
+                <f:for each="{item.enclosure}" as="enclosure">
+                    <f:if condition="{enclosure.localAsset}">
+                        <f:media width="250" file="{enclosure.localAsset}" />
+                    </f:if>
+                </f:for>
+            </f:if>
+        </f:for>
+
+        <f:debug inline="1">{rss.items.0}</f:debug>
+    </f:if>
+
+</f:section>
+</html>
